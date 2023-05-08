@@ -10,6 +10,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { HomeComponent } from './home/home.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { CommunicationComponent } from './communication/communication.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { CommunicationComponent } from './communication/communication.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
