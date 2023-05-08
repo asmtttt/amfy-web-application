@@ -1,0 +1,28 @@
+.container-fluid{
+    margin-top: 8%;
+}
+
+// .search-button{
+//     background-color: #AC3B61 !important;
+//     color: white;
+// }
+
+// .search-button:hover{
+//     background-color: #AC3B61 !important;
+//     color: white;
+//     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+// }
+
+:host ::ng-deep .btn-outline-danger{
+    background-color: white;
+    color: #3aafa9;
+    border-color: #3aafa9;
+
+}
+
+:host ::ng-deep .btn-outline-danger:hover{
+    background-color: #3aafa9;
+    color: white;
+    border-color: #3aafa9;
+
+}

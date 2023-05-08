@@ -1,0 +1,134 @@
+.navbar-brand img {
+    // border-radius: 50%;
+  }
+
+.navbar{
+   background-color: #cd916e !important;
+   background-color: #3aafa9 !important;
+
+}
+
+ .nav-link{
+    color: #17242a !important;
+    color: white !important;
+    // font-size: 17px !important;
+}
+
+.nav-link:hover{
+    color: #17242a !important;
+    // background-color: white !important;
+    // font-size: 17px !important;
+    cursor: pointer;
+}
+
+.dropdown{
+  border-width:2px;
+  border-style:solid;
+  border-color:#3aafa9;
+  border-radius: 10px;
+  margin-right: 5%;
+  color: white !important;
+}
+
+.dropdown:hover{
+  border-width:2px;
+  border-style:solid;
+  border-color:white;
+  border-radius: 10px;
+  margin-right: 5%;
+  color: #17242a !important;
+  cursor: pointer;
+
+
+}
+
+#navbar-menu {
+  border-width:2px;
+  border-style:solid;
+  border-color:#3aafa9;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+#navbar-menu:hover {
+  border-width:2px;
+  border-style:solid;
+  border-color:white;
+  border-radius: 10px;
+  margin-right: 10px;
+  background-color: white;
+  transition: background-color 0.5s ease
+}
+
+.linkedin {
+  background-color: #0a66c2;
+  border-width:2px;
+  border-style:solid;
+  border-color: #0a66c2;
+  border-radius: 10px;
+  margin-right: 5%;
+}
+
+.linkedin:hover {
+  background-color: #0a66c2;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+  border-width:2px;
+  border-style:solid;
+  border-color: #0a66c2;
+  border-radius: 10px;
+  margin-right: 5%;
+}
+
+// .linkedin-icon:hover {
+//   color: white
+// }
+
+.fa-linkedin-in {
+  font-weight: 400;
+  color: white;
+}
+
+.youtube {
+  background-color: #ff0000;
+  border-width:2px;
+  border-style:solid;
+  border-color: #ff0000;
+  border-radius: 10px;
+  margin-right: 5%;
+}
+
+.youtube:hover {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+  margin-right: 5%;
+}
+
+.fa-youtube {
+  font-weight: 400;
+  color: white;
+}
+
+.instagram {
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  border-width:2px;
+  border-style:solid;
+  border-color: #ff0000;
+  border-radius: 10px;
+  border-color: #0a66c2;
+  margin-right: 5%;
+
+}
+
+.instagram:hover {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+  margin-right: 5%;
+}
+
+.fa-instagram {
+  font-weight: 400;
+  color: white;
+}
+
+::ng-deep .dropdown-toggle{
+  color: white !important;
+}

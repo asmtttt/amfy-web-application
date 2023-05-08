@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src=".\assets\images\amfy-logo-green.png" alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active" id="navbar-menu">
+            <a class="nav-link" (click)="navigateToPage('home')">Anasayfa</a>
+          </li>
+          <li class="nav-item" id="navbar-menu">
+            <a class="nav-link" (click)="navigateToPage('resume')">Özgeçmişim</a>
+          </li>
+          <li class="nav-item" id="navbar-menu">
+            <a class="nav-link" (click)="navigateToPage('projects')">Projeler</a>
+          </li>
+          <li class="nav-item" id="navbar-menu">
+            <a class="nav-link" (click)="navigateToPage('blogs')">Bloglar</a>
+          </li>
+          <li class="nav-item" id="navbar-menu">
+            <a class="nav-link" (click)="navigateToPage('communication')">İletişim</a>
+          </li>
+        </ul>
+        <div class="navbar-nav">
+          <li class="nav-item dropdown" id="navbar-menu">
+            <a class="nav-link" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Language</a>
+            <div class="dropdown-menu" aria-labelledby="languageDropdown">
+              <a class="dropdown-item" href="#"><img src=".\assets\images\languages-flag\tr.svg" alt="Turkey"> Türkçe</a>
+              <a class="dropdown-item" href="#"><img src=".\assets\images\languages-flag\gb-eng.svg" alt="United Kingdom"> English</a>
+              <a class="dropdown-item" href="#"><img src=".\assets\images\languages-flag\de.svg" alt="Germany"> Deutsch</a>
+            </div>
+          </li>
+          <div class="nav-item instagram" id="instagram">
+            <a class="nav-link instagram-icon" href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+          <div class="nav-item youtube" id="youtube">
+            <a class="nav-link youtube-icon" href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+          <div class="nav-item linkedin" id="linkedin">
+            <a class="nav-link linkedin-icon" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </nav>

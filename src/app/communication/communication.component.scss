@@ -1,0 +1,42 @@
+.main {
+    margin-top: 10%;
+}
+
+:host ::ng-deep .btn-outline-danger{
+    background-color: white;
+    color: #3aafa9;
+}
+
+:host ::ng-deep .btn-outline-danger:hover{
+    background-color: #3aafa9;
+    color: white;
+}
+
+:host ::ng-deep textarea:focus {
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+.btn-outline-danger{
+    background-color: white;
+    color: #3aafa9;
+    float: right;
+    width: 50%;
+    border-color: #3aafa9;
+
+}
+
+.btn-outline-danger:hover{
+    background-color: #3aafa9;
+    color: white;
+    float: right;
+    width: 50%;
+    border-color: #3aafa9;
+}
+
+.row {
+    margin-top: auto;
+}

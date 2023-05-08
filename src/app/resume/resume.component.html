@@ -1,0 +1,81 @@
+<div class="container-fluid main">
+  <div class="row photos-bar">
+    <i class="picture fa-solid fa-graduation-cap fa-2xl" (click)="setDisplayContent('education')"></i>
+    <img class="picture profile-photo-pic" src=".\.\assets\images\profile-photo.png" (click)="setDisplayContent('profile')" alt="Profile Picture">
+    <i class="picture fa-solid fa-laptop fa-2xl" (click)="setDisplayContent('skills')"></i>    
+  </div>
+    <div class="profile-info">
+      <h4 class="name-text text">Samet Öçsoy</h4>
+      <hr>
+      <div class="row">
+        <div class="col-4"></div>
+        <div *ngIf="displayContent === 'education'" class="col-4 schools">
+          <br>
+          <h5 style="text-align: center;">Eğitim</h5>
+          <hr>
+          <p style="font-size: medium;"><b>Oğuz Canpolat Anadolu Lisesi</b><br>Sayısal</p>
+          <p style="font-size: medium;"><b>İstanbul Topkapı Üniversitesi</b><br>Bilgisayar Mühendisliği<br>GNO: 3.47</p>
+        </div>
+        <div *ngIf="displayContent === 'skills'" class="col-4 area-interest">
+          <br>
+          <h5 style="text-align: center;">İlgi Alanları</h5>
+          <hr>
+          <div class="row">
+            <div class="col-6">
+              <p style="font-size: medium;">Frontend</p>
+            </div>
+            <div class="col-6">
+              <p style="font-size: medium;">Backend</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <p style="font-size: medium;">Veri Kazıma</p>
+            </div>
+            <div class="col-6">
+              <p style="font-size: medium;">Veri Bilimi</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <p style="font-size: medium;">Veri Analizi</p>
+            </div>
+            <div class="col-6">
+              <p style="font-size: medium;">Makine Öğrenmesi</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <p style="font-size: medium;">Doğal Dil İşleme</p>
+            </div>
+            <div class="col-6">
+              <p style="font-size: medium;">Görüntü İşleme</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4"></div>
+      </div>
+
+      <!-- <p class="p-text">Merhaba, benim adım Samet. 14 Eylül 2000 tarihinde dünyaya geldim ve 23 yaşındayım.
+         Şu an için bir lojistik firmasında yazılım mühendisi olarak görev alıyorum. Kendimi bildim bileli
+         basketbol oynuyorum, matematik problemleri çözüyorum ve tarih kitapları okuyorum. Hayatımı da bu üçgende
+         geliştirmeye gayret ediyorum. Günümüz dünyasında tek bir meslek ile ömrümüzün sonuna kadar hayat sürmenin çağdışı
+         bir düşünce olduğuna inanıyorum.
+      </p>
+      <p class="p-text">Hayatta her insanın birden fazla mesleği olması gerektiğini savunuyorum. Bu nedenle kariyerim için gelecek planlaması yaparken
+        yazılım mühendisliği, basketbol antrenörlüğü ve akademisyenlik olmak üzere 3 farklı meslek üzerinden kendime bir kariyer planlaması
+        yapmaktayım. Yaklaşık 6 yaşımdan beri çeşitli kulüplerde amatör ve profesyonel seviyede olmak üzere basketbol oynuyorum.
+        Ofis hayatının yanı sıra bu şekilde fiziksel gelişimi de ihmal etmeyen bir mesleğin bireysel gelişimime de katkı sağlayacağını düşünüyorum. 
+      </p>
+      <p class="p-text">Eğitim hayatımı; <b>İstanbul Topkapı Üniversitesi</b>'nde Bilgisayar Mühendisliği programında 3.47 genel ortalama ile tamamlayarak
+        kendimi direkt olarak sektöre atmış bulunmaktayım. Şu an için bulunduğum firmada angular teknolojisini kullanarak
+        frontend tarafında çalışmalar sergiliyorum. Bunun yanı sıra backend tarafında da geliştirmeler yapıyorum.
+      </p>
+      <p class="p-text">Yazılım sektöründe; sadece web teknolojileri ile sınırlı kalmayıp bunun yanı sıra makine öğrenmesi ve yapay zeka teknolojilerine
+        ilgi duyuyor ve projeler geliştiriyorum. İleride hem web tarafında hem de yapay zeka tarafında çalışmalar sergileyen bir akademisyenlik
+        olmayı hedefliyorum. En büyük hedeflerimden birisi tarım ve enerji alanlarında Türkiye Cumhuriyeti için toplumun refah düzeyini
+        kalkındıracak çalışmalara imza atarak her bireyin ulaşmayı hedeflediği ürüne daha kısa sürede ve daha ucuz bir maliyete erişimesine
+        katkıda bulunmak olacaktır. Tarım alanında yapılacak çalışmaların ülkemizin kalkınmasındaki en büyük yol anahtarı olduğunu düşünüyorum.
+      </p> -->
+    </div>
+  </div>
