@@ -7,22 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogsComponent implements OnInit {
 
-  constructor() { }
+  // variables
 
-  // 
   searchText = "";
-
-  // blog = {
-  //   img: "...",
-  //   title: "Machine Learning",
-  //   content: "...",
-  //   date: "14.05.2023",
-  //   topic: "Technology",
-  //   writer: "Samet Öçsoy"
-  // };
-
-  filteredBlogs = [];
-  blogs = [
+  filteredBlogs: any[] = [];
+  blogs: any[] = [
     {
       img: "...",
     title: "Machine Learning",
@@ -106,12 +95,19 @@ export class BlogsComponent implements OnInit {
     }
   ];
 
+  constructor() { 
+  }
 
   ngOnInit(): void {
+    // default olarak filtrelenmiş veriler tüm veriler olarak geliyor
+    this.filteredBlogs = this.blogs;
   }
 
   onSearch() {
-    console.log("search text: ", this.searchText);
+    var filteredBlogs: any[] = [];
+    filteredBlogs = this.blogs.filter(blog => blog.title.toLowerCase().includes(this.searchText.toLowerCase()));
+    this.filteredBlogs = filteredBlogs;
+  
   }
 
 }
