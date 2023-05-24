@@ -26,3 +26,58 @@
     border-color: #3aafa9;
 
 }
+
+
+.card-blog {
+    transition: background-color 0.7s ease;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+}
+.card-blog:hover {
+    cursor: pointer;
+    // border-color: red;
+    // border: 1px solid red;
+    transition: background-color 0.7s ease;
+    background-color: #3aafa9;
+    color: white;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+}
+
+input[type="search"]::-webkit-search-cancel-button:hover {
+    cursor: pointer;
+  }
+  input[type="search"]::-moz-search-cancel-button:hover {
+    cursor: pointer;
+  }
+  input[type="search"]::-ms-clear:hover {
+    cursor: pointer;
+  }
+
+  .topic-text{
+    font-size: smaller;
+    color: white;
+    background-color: #3aafa9;
+  }
+
+  .topic-text:hover{
+    color: white;
+    font-size: smaller;
+    border-color: white;
+    background-color: #3aafa9;
+  }
+
+  .title-blog {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .custom-card {
+    height: 240px; /* İstediğiniz sabit yükseklik değerini burada belirleyin */
+    overflow: hidden;
+  }
+  
+  .custom-card .card-body {
+    height: 100%;
+    // display: flex;
+    // flex-direction: column;
+    justify-content: center;
+  }

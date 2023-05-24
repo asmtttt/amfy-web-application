@@ -3,16 +3,37 @@
         <div class="col-4"></div>
         <div class="col-4">
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Search">
+                <input type="search" class="form-control" [(ngModel)]="searchText" (ngModelChange)="onSearch()" placeholder="Search">
                 <!-- <button class="btn search-button" type="submit"><i class="fas fa-search"></i> -->
                 <button type="button" class="btn btn-outline-danger"><i class="fas fa-search"></i></button>
             </div>
         </div>
         <div class="col-4">
-            <button type="button" class="btn btn-outline-danger"><i class="fas fa-plus"> Blog</i></button>
+            <button style="width: 20%;" type="button" class="btn btn-outline-danger text"><i class="fas fa-plus"></i> Blog</button>
         </div>
     </div>
-    <div class="row">
-        <p>dünya</p>        
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-sm-6 col-lg-4 mb-4" *ngFor="let blog of blogs">
+                        <div class="card rounded-4 shadow-2-strong card-blog custom-card">
+                            <div class="card-body">
+                                <div class="d-inline-flex p-2 bd-highlight rounded-pill topic-text">#{{blog.topic}}</div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title d-flex justify-content-center title-blog">{{blog.title}}</h5>
+                            </div>
+                            <div class="card-footer d-flex justify-content-center">
+                                <div class="row card-text">{{blog.date}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
     </div>
 </div>
