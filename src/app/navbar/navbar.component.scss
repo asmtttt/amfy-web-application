@@ -1,220 +1,84 @@
-.navbar-brand img {
-    // border-radius: 50%;
+.bg-navbar {
+  background-color: #c53678;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #fac800 !important;
+}
+
+.my-navbar {
+  height: 80px !important;
+  
+}
+
+.logo {
+  font-size: 18px; /* Varsayılan büyüklük */
+}
+
+@media (min-width: 576px) {
+  /* Ekran genişliği 576 pikselden büyükse */
+  .logo {
+    font-size: 24px;
   }
-
-.navbar{
-   background-color: #cd916e !important;
-   background-color: #3aafa9 !important;
-
 }
 
- .nav-link{
-    color: #17242a !important;
-    color: white !important;
-    // font-size: 17px !important;
+@media (min-width: 992px) {
+  /* Ekran genişliği 992 pikselden büyükse */
+  .logo {
+    font-size: 30px;
+  }
 }
 
-.nav-link:hover{
-    color: #17242a !important;
-    // background-color: white !important;
-    // font-size: 17px !important;
-    cursor: pointer;
-}
-
-.dropdown{
-  border-width:2px;
-  border-style:solid;
-  border-color:#3aafa9;
-  border-radius: 10px;
-  margin-right: 5%;
+.nav-link {
   color: white !important;
 }
 
-.dropdown:hover{
-  border-width:2px;
-  border-style:solid;
-  border-color:white;
-  border-radius: 10px;
-  margin-right: 5%;
-  color: #17242a !important;
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-nav .nav-link {
+  margin: 0 10px;
+}
+
+.navbar-nav .nav-link:hover{
   cursor: pointer;
-
-
 }
 
-#navbar-menu {
-  border-width:2px;
-  border-style:solid;
-  border-color:#3aafa9;
-  border-radius: 10px;
-  margin-right: 10px;
-  transition: background-color 0.5s ease
+.navbar-nav .instagram-icon:hover {
+  cursor: pointer;
+  color: #f30184 !important;
+  background-color: #e7e9eb;
 }
 
-#navbar-menu:hover {
-  border-width:2px;
-  border-style:solid;
-  border-color:white;
-  border-radius: 10px;
-  margin-right: 10px;
-  background-color: white;
-  transition: background-color 0.5s ease
+.navbar-nav .youtube-icon:hover {
+  cursor: pointer;
+  color: #ff0000 !important;
+  background-color: #e7e9eb;
 }
 
+.navbar-nav .linkedin-icon:hover {
+  cursor: pointer;
+  background-color: #0a66c2 !important;
+  color: #e7e9eb !important;
+}
 
-
-// .linkedin {
-//   background-color: #0a66c2;
-//   border-width:2px;
-//   border-style:solid;
-//   border-color: #0a66c2;
-//   border-radius: 10px;
-//   margin-right: 5%;
-//   transition: background-color 0.5s ease
-
+// .navbar-nav .social-media-icon-bg:hover {
+//   cursor: pointer;
+//   background-color: #f2f2f2;
 // }
 
-// .linkedin:hover {
-//   background-color: #0a66c2;
-//   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
-//   border-width:2px;
-//   border-style:solid;
-//   border-color: #0a66c2;
-//   border-radius: 10px;
-//   margin-right: 5%;
-//   transition: background-color 0.5s ease
-
-// }
-
-// // .linkedin-icon:hover {
-// //   color: white
-// // }
-
-// .fa-linkedin-in {
-//   font-weight: 400;
-//   color: white;
-//   transition: background-color 0.5s ease
-
-// }
-
-// .youtube {
-//   height: 60%;
-//   margin-top: 20%;
-//   margin-bottom: 20%;
-//   background-color: #ff0000;
-//   border-style:solid;
-//   border-color: #ff0000;
-//   border-radius: 10px;
-//   transition: background-color 0.5s ease;
-//   margin-right: 5%;
-
-// }
-
-// .youtube:hover {
-//   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
-//   transition: background-color 0.5s ease
-
-// }
-
-// .fa-youtube {
-//   font-weight: 400;
-//   padding-top: 30%;
-//   padding-bottom: 30%;
-//   color: white;
-//   transition: background-color 0.5s ease
-
-// }
-
-// .instagram {
-//   background: #d6249f;
-//   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-//   border-width:2px;
-//   border-style:solid;
-//   border-color: #ff0000;
-//   border-radius: 10px;
-//   border-color: #0a66c2;
-//   margin-right: 5%;
-//   transition: background-color 1s ease
-
-
-// }
-
-// .instagram:hover {
-//   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
-//   margin-right: 5%;
-//   transition: background-color 1s ease
-
-// }
-
-// .fa-instagram {
-//   font-weight: 400;
-//   color: white;
-//   transition: background-color 1s ease
-
-// }
-
-::ng-deep .dropdown-toggle{
-  color: white !important;
+.transition {
+  transition: 0.7s !important;
 }
 
-.instagram {
-
+.transition:hover {
+  transition: 0.7s !important;
 }
 
-
-
-.social-icon {
-  position: relative;
+.dropdown-item:hover {
+  cursor: pointer;
 }
 
-.social-icon:hover::before {
-  visibility: visible;
-  transform: scaleX(1);
-}
-
-.instagram::before {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #d6249f;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.2s ease-in-out;
-}
-
-.youtube::before {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #ff0000;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.2s ease-in-out;
-}
-
-.linkedin::before {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #0a66c2;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.2s ease-in-out;
-}
-
-// .fa-linkedin-in:hover{
-//   color: #0a66c2;
-// }
-
-.linkedin:hover + .fa-linkedin-in{
-  color: #0a66c2;
-}
+.text{}

@@ -1,3 +1,7 @@
 {
-    "LOGIN": "Giriş Yap"
+    "HOME": "Anasayfa",
+    "RESUME": "Özgeçmişim",
+    "PROJECTS": "Projeler",
+    "BLOGS": "Makaleler",
+    "COMMUNICATION": "İletişim"
 }

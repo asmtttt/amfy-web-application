@@ -1,39 +1,137 @@
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4">
-            <div class="input-group mb-3">
-                <input type="search" class="form-control" [(ngModel)]="searchText" (ngModelChange)="onSearch()" placeholder="Search by Title">
-                <!-- <button class="btn search-button" type="submit"><i class="fas fa-search"></i> -->
-                <button type="button" class="btn btn-outline-danger"><i class="fas fa-search"></i></button>
-            </div>
-        </div>
-        <div class="col-4">
-            <button style="width: 20%;" type="button" class="btn btn-outline-danger text"><i class="fas fa-plus"></i> Blog</button>
-        </div>
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <div class="input-group mb-3">
+        <input type="search" class="form-control border-start" [(ngModel)]="searchText" (ngModelChange)="onSearch()"
+          placeholder="Search by Title">
+        <!-- <button class="btn search-button" type="submit"><i class="fas fa-search"></i> -->
+        <button type="button" class="btn btn-outline-danger"><i class="fas fa-search"></i></button>
+      </div>
     </div>
-    <br>
-    <div class="container">
+    <div class="col-4">
+      <button style="width: 20%;" type="button" class="btn btn-outline-danger text" data-bs-toggle="modal"
+        data-bs-target="#addBlogModal">
+        <i class="fas fa-plus"></i> Blog
+      </button>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-1 filter-left-right"></div>
+    <div class="col-2">
+      <div class="row rounded-4 shadow-2-strong">
+        <div class="col-12" style="text-align: center;">
+          <label for="filter-title">
+            <h4>Filtrele</h4>
+          </label>
+        </div>
+        <div class="col-12" style="margin-top: 10%;">
+          <label for="writer">Yazar:</label>
+        </div>
+        <div class="col-12 input-group mb-3 input-group-sm">
+          <input type="search" class="form-control" placeholder="Enter a Writer" [(ngModel)]="filterWriterName">
+        </div>
+
+        <div class="col-12">
+          <label for="topic">Konu:</label>
+        </div>
+        <div class="col-12 input-group mb-3 input-group-sm">
+          <input type="search" class="form-control" placeholder="Enter a Topic" [(ngModel)]="filterTopic">
+        </div>
+
+        <div class="col-12">
+          <label for="topic">Blog Numarası:</label>
+        </div>
+        <div class="col-12 input-group mb-3 input-group-sm">
+          <input type="search" class="form-control" placeholder="Enter a Blog Number" [(ngModel)]="filterBlogNumber">
+        </div>
+
+        <div class="col-12">
+          <label for="topic">Oluşturma Tarihi:</label>
+        </div>
+        <div class="col-12 input-group mb-3 input-group-sm">
+          <input type="date" class="form-control createdDateInput" placeholder="Enter a Created Date" [(ngModel)]="filterCreatedDate">
+        </div>
+
+        <div class="col-12" style="margin-bottom: 10%;">
+          <div class="row">
+            <div class="col-6 d-grid gap-2">
+              <button type="button" class="btn btn-outline-danger" (click)="clearAllFilters()">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+            <div class="col-6 d-grid gap-2">
+              <button type="button" class="btn btn-outline-danger" (click)="filterBlog()" >
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-1 filter-left-right"></div>
+    <div class="col-6">
+      <div *ngIf="filteredBlogs.length != 0" class="row" style="overflow-y: scroll; height: 500px;">
+        <div class="col-sm-6 col-lg-4 mb-4" *ngFor="let blog of filteredBlogs">
+          <div class="card rounded-4 shadow-2-strong card-blog custom-card">
+            <div class="card-body">
+              <div class="d-inline-flex p-2 bd-highlight rounded-pill topic-text">#{{blog.topic}}</div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title d-flex justify-content-center title-blog">{{blog.title}}</h5>
+            </div>
+            <div class="card-footer d-flex justify-content-center">
+              <div class="row card-text">{{blog.date}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="filteredBlogs.length === 0" class="row">
+        <div class="alert alert-danger text-center data-not-found" role="alert">
+          Sonuç Bulunamadı!
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-4"></div>
+  </div>
+</div>
+
+
+<!-- ADD BLOG MODAL -->
+<div class="modal fade" id="addBlogModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Add New Blog</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+
         <div class="row">
-            <div class="col-2"></div>
-            <div class="col-8">
-                <div class="row">
-                    <div class="col-sm-6 col-lg-4 mb-4" *ngFor="let blog of filteredBlogs">
-                        <div class="card rounded-4 shadow-2-strong card-blog custom-card">
-                            <div class="card-body">
-                                <div class="d-inline-flex p-2 bd-highlight rounded-pill topic-text">#{{blog.topic}}</div>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title d-flex justify-content-center title-blog">{{blog.title}}</h5>
-                            </div>
-                            <div class="card-footer d-flex justify-content-center">
-                                <div class="row card-text">{{blog.date}}</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-2"></div>
+          <div class="col-6">
+            <input type="text" class="form-control" placeholder="Title">
+          </div>
+          <div class="col-6">
+            <input type="text" class="form-control" placeholder="Title">
+          </div>
         </div>
+
+
+
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
     </div>
+  </div>
 </div>

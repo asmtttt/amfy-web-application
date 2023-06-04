@@ -81,3 +81,39 @@ input[type="search"]::-webkit-search-cancel-button:hover {
     // flex-direction: column;
     justify-content: center;
   }
+
+  .data-not-found {
+    text-align: center; 
+    margin-top: 10%; 
+    width: 50%; 
+    margin-right: auto; 
+    margin-left: auto;
+  }
+
+  .form-control:focus {
+    border-color: #ad3b61;
+    box-shadow: 0 0 0 0.070rem #ad3b61;
+} 
+
+.filter-border {
+  border-style: solid; 
+  margin-left: auto; 
+  margin-right: auto; 
+  border-color: #ad3b61;
+}
+
+.add-new-blog-modal{
+  height: 100%;
+  width: 200vh;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.createdDateInput{
+  cursor: pointer;
+}
+
+::ng-deep .filter-left-right {
+  flex: 0 0 auto;
+  width: 4.33333333%;
+}

@@ -95,6 +95,12 @@ export class BlogsComponent implements OnInit {
     }
   ];
 
+  // filter inputs variables
+  filterWriterName: string = "";
+  filterTopic: string = "";
+  filterBlogNumber: string = "";
+  filterCreatedDate: Date | null = null;
+
   constructor() { 
   }
 
@@ -108,6 +114,24 @@ export class BlogsComponent implements OnInit {
     filteredBlogs = this.blogs.filter(blog => blog.title.toLowerCase().includes(this.searchText.toLowerCase()));
     this.filteredBlogs = filteredBlogs;
   
+  }
+
+  clearAllFilters(){
+    this.filterWriterName = "";
+    this.filterTopic = "";
+    this.filterBlogNumber = "";
+    this.filterCreatedDate = null;
+  }
+
+  filterBlog(){
+   var filterBlogRequest = {
+    writer: this.filterWriterName,
+    topic: this.filterTopic,
+    blogNumber: this.filterBlogNumber,
+    createdDate: this.filterCreatedDate,
+   }
+   
+   // buraya servis kodları yazılacak ve içerisine request eklenecek.
   }
 
 }

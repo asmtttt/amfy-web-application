@@ -1,3 +1,7 @@
 {
-    "LOGIN": "Login"
+    "HOME": "Home",
+    "RESUME": "Resume",
+    "PROJECTS": "Projects",
+    "BLOGS": "Blogs",
+    "COMMUNICATION": "Communication"
 }
